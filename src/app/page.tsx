@@ -1,12 +1,21 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select } from "@/components/ui/select";
 
 export default function Home() {
 	return (
-		<div>
-			<Button size="sm">Click Me</Button>
-			<p className="text-red-500 font-semibold">
-				Welcome to the Next.js application!
-			</p>
+		<div className="flex gap-4">
+			<Input />
+			<Select />
+
+			<Button>Primary</Button>
+			<Button variant="secondary">Secondary</Button>
+			<Button variant="destructive">Destructive</Button>
+			<Button variant="ghost">Ghost</Button>
+			<Button variant="muted">Muted</Button>
+
+			<Button variant="outline">Outline</Button>
+			<Button variant="tertiary">Tertiary</Button>
 		</div>
 	);
 }
