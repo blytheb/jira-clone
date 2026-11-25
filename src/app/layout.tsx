@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 
 //alias imports
 import { cn } from "@/lib/utils";
+import { QueryProvider } from "@/components/query-provider";
 
 //relative imports
 import "./globals.css";
@@ -23,7 +24,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={cn(inter.className, "antialiased min-h-screen")}>
-				{children}
+				<QueryProvider>{children}</QueryProvider>
 			</body>
 		</html>
 	);
