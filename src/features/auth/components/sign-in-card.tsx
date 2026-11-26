@@ -17,6 +17,7 @@ import {
 	FormMessage,
 } from "@/components/ui/form";
 import { loginSchema } from "../schemas";
+import { useLogin } from "../api/use-login";
 
 export const SignInCard = () => {
 	const { mutate } = useLogin();
@@ -30,7 +31,7 @@ export const SignInCard = () => {
 	});
 
 	const onSubmit = (values: z.infer<typeof loginSchema>) => {
-		mutate(values);
+		mutate({ json: values });
 	};
 
 	return (
